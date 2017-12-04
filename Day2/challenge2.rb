@@ -42,6 +42,7 @@ class Challenge2
 			#printf("%s\n", parse_div(tmp_list))
 			_checksum_ += parse_div(tmp_list)
 		end
+		
 		return _checksum_	
 	end
 end
