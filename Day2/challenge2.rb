@@ -41,9 +41,7 @@ class Challenge2
 			tmp_list 	= tmp_list.each { |k| tmp_list.delete(k) if k == 1 || k == 0 }
 			#printf("%s\n", parse_div(tmp_list))
 			_checksum_ += parse_div(tmp_list)
-	
 		end
-
 		return _checksum_	
 	end
 end
