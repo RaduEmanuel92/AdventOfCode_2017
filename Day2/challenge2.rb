@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 #define class Challenge2
-
 class Challenge2
 
 	def initialize(input_ = "input")
@@ -18,7 +17,6 @@ class Challenge2
 			tmp_list 	= process_string(line).minmax
 			_checksum_ += tmp_list.last - tmp_list.first
 		end
-
 		return _checksum_	
 	end
 
@@ -42,11 +40,9 @@ class Challenge2
 			#printf("%s\n", parse_div(tmp_list))
 			_checksum_ += parse_div(tmp_list)
 		end
-		
 		return _checksum_	
 	end
 end
-
 
 if __FILE__ == $0
 
@@ -55,4 +51,3 @@ if __FILE__ == $0
 	#challenge.solve2
 	printf("[+] Checksum is: %d\n" , challenge.solve2)
 end
-
