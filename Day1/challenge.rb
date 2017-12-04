@@ -8,14 +8,10 @@ if __FILE__ == $0
 	#create iterator
 	str_array = value_from_file.split("").reject{|c| c == "\n"}
 	int_array = str_array.map(&:to_i)
-	#puts int_array
-
 
 	#Parse the string
 	_sum_ 	= 0
 	_len_ 	= int_array.length - 1
-
-
 
 	for index in 0.._len_
 		#for task2, compute index and compare elements at current and computed index
