@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require "test/unit/assertions"
 require "solid_assert"
+
 def process_line(line)
 	return line.split(" ").map(&:to_i)
 end
@@ -23,21 +23,6 @@ def errbody_jump(list)
 	#printf("%s\n", counter)
 	return counter - 1
 end
-
-def task5(code)
-	counter = 0
-	for step in 1..666666677777
-		counter2 = counter
-		counter += code[counter]
-		code[counter2] +=1
-		printf("%s\n", counter)
-		if counter >= code.length
-			return step
-		end
-	end
-end
-
-
 
 def parse_file
 	opcode = []
