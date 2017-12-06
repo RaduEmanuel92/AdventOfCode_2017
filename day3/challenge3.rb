@@ -62,12 +62,12 @@ class Challenge3
 				return [0, index3_ - value_ ]
 			end
 		end
-
 	end
 
 	def getManhattanDistance(index_start, index_target)
 		return ((index_start[0] - index_target[0]).abs + (index_start[1] - index_target[1]).abs)
 	end
+
 	def neib_sum(m,i,j)
 		sum = 	m[i-1][j-1].to_i +
 				m[i][j-1].to_i 	+
@@ -109,8 +109,8 @@ class Challenge3
     		dx, dy = delta.next
     		run.times { 
       			if ((x == n/2) && (y == n/2)) 
-        			#spiral[x+=dx][y+=dy] =  1
         			spiral[x+=dx][y+=dy] = 1
+        			#puts "NOK"
       			else
         			value = neib_sum(spiral,x+=dx,y+=dy)
         			#printf("value %s\n", value)
@@ -124,7 +124,6 @@ class Challenge3
       		} 
   		end
   		spiral
-  
 	end
 end
 
@@ -134,16 +133,17 @@ if __FILE__ == $0
 	#input = 1024
 	#input = 31
 
+	#Task1
 	challenge3 	= Challenge3.new(input)
 	size_m 		= challenge3.find_lower_bound_square(input)
 	pos1 		= challenge3.get_index_of_start_spiral(size_m)
 	pos_target 	= challenge3.compute_position(size_m, input)
-	dist = challenge3.getManhattanDistance(pos1, pos_target)
+	dist 		= challenge3.getManhattanDistance(pos1, pos_target)
+
 	printf("%s\n", pos_target)
 	printf("Distance: %s\n", dist)
 
 	#Task2
-
 	task2 = challenge3.spiral2(size_m, input) 
 	puts task2
 end
