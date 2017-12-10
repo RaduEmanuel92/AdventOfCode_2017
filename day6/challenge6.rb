@@ -47,13 +47,12 @@ if __FILE__ == $0
 
 	input_l		= parse_input()
 	test_array 	= [0, 2, 7, 0]
-	
 	assert count_interations(test_array) == 5, "[-] Test failed."
 	
-	result 		= count_interations(input_l)
-	counter 	= result[0]
-	found_config= result[1]
-	
+	result 	= count_interations(input_l)
+	counter = result[0]
+	found_config = result[1]
+
 	printf("[+] Loop detected after %s cycles. \n", counter)
 	printf("[+] Size of loop: %s\n", count_interations(found_config)[0])
 end
