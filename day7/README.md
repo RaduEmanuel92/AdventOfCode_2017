@@ -25,12 +25,12 @@ For example, if your list is the following:
 ...then you would be able to recreate the structure of the towers that looks like this:
 
 				gyxo
-              		/     
+			/     
 		ugml ---	ebii
 		/	\     
 		|		jptl
 		|        
-      		|		pbga
+		|		pbga
     		/	/
 	tknk -	padx ----	havc
 		\	\
