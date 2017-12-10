@@ -31,7 +31,7 @@ For example, if your list is the following:
 		|		jptl
 		|        
 		|		pbga
-    		/	/
+		/	/
 	tknk -	padx ----	havc
 		\	\
 		|		qoyq
