@@ -24,23 +24,23 @@ For example, if your list is the following:
 
 ...then you would be able to recreate the structure of the towers that looks like this:
 
-                	  gyxo
+				gyxo
               		/     
-         	 ugml -	  ebii
-       		/      	\     
-      		|         jptl
+		ugml ---	ebii
+		/	\     
+		|		jptl
 		|        
-      		|         pbga
-    		/        /
-	tknk --- padx 	- havc
-		\        \
-	  	|         qoyq
-   		|             
-    		|         ktlj
-      		 \      /     
-        	  fwft -  cntj
-             		\     
-                	  xhth
+      		|		pbga
+    		/	/
+	tknk -	padx ----	havc
+		\	\
+		|		qoyq
+		|             
+		|		ktlj
+		\       /     
+		fwft ---	cntj
+			\     
+				xhth
 
 
 In this example, tknk is at the bottom of the tower (the bottom program), and is holding up ugml, padx, and fwft. Those programs are, in turn, holding up other programs; in this example, none of those programs are holding up any other programs, and are all the tops of their own towers. (The actual tower balancing in front of you is much larger.)
