@@ -5,19 +5,19 @@ require "solid_assert"
 $database = []
 
 def parse_input() 
-		input_list 	= []
-		file 		= File.open('input', 'r') {|f| f.read}
-		input_list 	= file.split("\t").map(&:to_i)		
-		return input_list
+	input_list 	= []
+	file 		= File.open('input', 'r') {|f| f.read}
+	input_list 	= file.split("\t").map(&:to_i)		
+	return input_list
 end
 
 def redistribute(input_list)
-		max_index 	= input_list.index(input_list.max)
-		steps 	  	= input_list[max_index]
-		input_list[max_index] = 0
-		for x in (1..steps)
-			input_list[(max_index + x) % input_list.length] += 1
-		end
+	max_index 	= input_list.index(input_list.max)
+	steps 	  	= input_list[max_index]
+	input_list[max_index] = 0
+	for x in (1..steps)
+		input_list[(max_index + x) % input_list.length] += 1
+	end
 	return	input_list
 end
 
@@ -41,8 +41,10 @@ end
 if __FILE__ == $0
 
 	input_l	= parse_input()
-	$database.push(input_l.join(','))
 	test_array = [0, 2, 7, 0]
+	#initialize database
+	$database.push(input_l.join(','))
+
 	assert count_interations(test_array) == 5, "[-] Test failed."
 	puts count_interations(input_l)
 end
