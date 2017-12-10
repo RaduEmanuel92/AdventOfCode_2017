@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 require "solid_assert"
 
 $database = []
@@ -24,8 +23,8 @@ end
 
 def count_interations(input_list)
 	#initialize database
-	$database		= []
-	steps			= 0
+	$database	= []
+	steps		= 0
 	$database.push(input_list.join(',')) 
 	candidate_list	= input_list
 
