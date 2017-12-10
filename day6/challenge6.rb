@@ -31,7 +31,7 @@ def count_interations(input_list)
 	#counter
 	while true
 		candidate_list	= redistribute(candidate_list)
-		steps			+= 1
+		steps	+= 1
 		search_string	= candidate_list.join(',')
 		if $database.include? search_string
 		 	break
