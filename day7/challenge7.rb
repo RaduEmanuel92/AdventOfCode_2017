@@ -1,13 +1,12 @@
-4#!/usr/bin/env ruby
+#!/usr/bin/env ruby
 require "solid_assert"
-
 $process_list = []
+$FIXNUM_MAX = (2**(0.size * 8 -2) -1)
 
 def process_line(line)
-	return line.split(' ').map { |x| x.chomp("/n")}.
-							reject { |x| x == "->" }.
-							map { |x| x.chomp(",")}.
-							map { |x| x.tr("()", '')}
+	return 	line.split(' ').map { |x| x.chomp("/n")}.
+			reject { |x| x == "->" }.map { |x| x.chomp(",")}.
+			map { |x| x.tr("()", '')}
 end
 
 def parse_file(file)
@@ -46,10 +45,8 @@ end
 def find_weight(proc)
 	temp = $process_list.find{ |x| x[0] == proc}
 	sum = temp[1].to_i
-	#printf("node_s : %s\n", sum)
 	if temp.length > 2	
 		parse = temp[2..(temp.length-1)]
-		#printf("parse : %s\n", parse)
 		for index in parse
 			sum += find_weight(index)	
 		end
@@ -60,7 +57,7 @@ def find_weight(proc)
 end
 
 def compute_layers
-	min = 100000000000
+	min = $FIXNUM_MAX
 	issue_layer = []
 	found_layer = []
 	$process_list.each do |x|	
