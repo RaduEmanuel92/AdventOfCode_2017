@@ -38,16 +38,21 @@ def largest_key(hash)
 end
 
 def solver(file)
+	max_val = 0
 	File.open(file, "r").each do |line|
 		instruction =  process_line(line) 
 		if test_condition(instruction[1])
 			operation(instruction[0])
+			if  max_val < largest_key($vars)[1]
+				max_val = largest_key($vars)[1]
+			end
 		end
-	end		
+	end
+	return max_val		
 end 
 
 if __FILE__ == $0
-	solver("input")
+	puts solver("input")
 	puts $vars
 	puts largest_key($vars)
 end
