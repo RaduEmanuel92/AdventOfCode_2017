@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 require "solid_assert"
+require "test/unit/assertions.rb"
+
 $process_list = []
 $FIXNUM_MAX = (2**(0.size * 8 -2) -1)
 
@@ -13,7 +15,6 @@ def parse_file(file)
 	f = file
 	File.open(f, "r").each do  |line|  
 		line = process_line(line).to_a
-		#printf("%s\n", line)
 		$process_list.push(line)
 	end
 end
@@ -85,6 +86,8 @@ end
 
 if __FILE__ == $0
 	#test
+	assert_not_same("x", "x")
+
 	parse_file("input_test")
 	answer = find_bottom($process_list[0])
 	printf("[+] Answer: %s\n", answer == 'tknk')
