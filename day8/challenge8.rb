@@ -4,7 +4,7 @@ require "test/unit/assertions"
 $vars = Hash.new
 
 def process_line(line)
-	return line.split('if').map {|x| x.chomp("\n")}.map { |x| x.split(' ')}						   
+	return line.split('if').map {|x| x.chomp("\n")}.map {|x| x.split(' ')}						   
 end
 
 def test_existence(value)
