@@ -4,14 +4,13 @@ require "test/unit/assertions"
 $vars = Hash.new
 
 def process_line(line)
-	return line.split('if').map { |x| x.chomp("\n")  }
-							.map { |x| x.split(' ') }						   
+	return line.split('if').map {|x| x.chomp("\n")}
+						.map { |x| x.split(' ')}						   
 end
 
 def test_existence(value)
 	if !$vars.has_key?(value)
 		$vars.store(value, 0)
-		#print $vars
 	end
 end
 
@@ -41,8 +40,7 @@ end
 
 def solver(file)
 	File.open(file, "r").each do |line|
-		instruction =  process_line(line)
-		#printf("%s\n", instruction) 
+		instruction =  process_line(line) 
 		if test_condition(instruction[1])
 			operation(instruction[0])
 		end
